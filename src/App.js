@@ -437,13 +437,14 @@ const App = () => {
   const handleAnswer = answer => {
     var currentQuestions = questions
     questions[currentQuestion].answer = answer
+    console.log(questions[currentQuestion])
     setQuestions(currentQuestions)
   }
 
   const submitQuiz = () => {
     questions.forEach((q, i) => {
       const currentQuestionNumber = i + 1
-      if (q.answer == q.type) {
+      if (q.answer === q.type) {
         const secondDigit = Number(
           String(currentQuestionNumber).charAt(currentQuestionNumber < 10 ? 0 : 1)
         )
@@ -451,6 +452,14 @@ const App = () => {
         currentScores[(secondDigit == 0 ? 10 : secondDigit) - 1].score =
           currentScores[(secondDigit == 0 ? 10 : secondDigit) - 1].score + 1
         setScores(currentScores)
+        console.log(
+          'Question ' +
+            currentQuestionNumber +
+            ' +1 point to category ' +
+            (secondDigit == 0 ? 10 : secondDigit)
+        )
+      } else {
+        console.log('Question ' + currentQuestionNumber + ' No Point')
       }
     })
     setShowScore(true)

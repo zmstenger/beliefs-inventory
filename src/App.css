@@ -40,7 +40,7 @@ p.question {
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   width: 70%;
-  min-width: 500pt;
+  
   min-height: 144pt;
   background-color: #eeeeee;
   padding: 16pt;
@@ -68,8 +68,8 @@ h2 {
   border-radius: 8pt;
   color: white;
   padding: 8pt;
-  width: 40%;
-  min-width: 500pt;
+  width: 70%;
+
   text-align: center;
   text-decoration: none;
   display: block;
